@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Guardian{% endblock title %}
+
+{% block body %}
+
+<div class="container">
+    <br>
+    <form class="row g-3" method="post" action="/classroomform">
+        {% csrf_token %}
+
+        <div class="col-md-4">
+            <label for="standard" class="form-label">standard</label>
+            <input type="text" class="form-control" id="standard" name="standard" required>
+        </div>
+
+
+        <div class="col-md-4">
+            <label for="fid" class="form-label">fid</label>
+            <input type="number" class="form-control" id="fid" name="fid" required>
+
+        </div>
+
+	    <div class="col-md-4">
+            <label for="CR" class="form-label">CR</label>
+            <input type="text" class="form-control" id="CR" name="CR" required>
+
+        </div>
+
+
+
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit">Submit Data</button>
+        </div>
+    </form>
+</div>
+
+{% endblock body %}

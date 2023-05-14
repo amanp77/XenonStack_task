@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Guardian{% endblock title %}
+
+{% block body %}
+
+<div class="container">
+    <br>
+    <form class="row g-3" method="post" action="/subjectform">
+        {% csrf_token %}
+
+        <div class="col-md-4">
+            <label for="sub_id" class="form-label">sub_id</label>
+            <input type="text" class="form-control" id="sub_id" name="sub_id" required>
+        </div>
+
+        <div class="col-md-4">
+            <label for="sub_name" class="form-label">sub_name</label>
+            <input type="text" class="form-control" id="sub_name" name="sub_name" required>
+        </div>
+
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit">Submit Data</button>
+        </div>
+    </form>
+</div>
+
+{% endblock body %}

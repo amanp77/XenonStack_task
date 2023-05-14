@@ -1,0 +1,43 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Faculty{% endblock title %}
+
+{% block body %}
+
+<div class="container">
+<br>
+<table class="table table-striped table-hover table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">fid</th>
+        <th scope="col">fname</th>
+        <th scope="col">lname</th>
+        <th scope="col">doj</th>
+        <th scope="col">sub_id</th>
+        <th scope="col">gender</th>
+        <th scope="col">address</th>
+        <th scope="col">M_no</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for sts in st %}
+      <tr>
+
+        <td>{{sts.fid}}</td>
+        <td>{{sts.fname}}</td>
+        <td>{{sts.lname}}</td>
+        <td>{{sts.doj}}</td>
+        <td>{{sts.sub_id}}</td>
+        <td>{{sts.gender}}</td>
+        <td>{{sts.address}}</td>
+        <td>{{sts.M_no}}</td>
+
+
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+</div>
+{% endblock body %}

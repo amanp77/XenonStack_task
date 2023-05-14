@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Student{% endblock title %}
+
+{% block body %}
+
+<div class="container">
+<br>
+<table class="table table-striped table-hover table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">prn_no</th>
+        <th scope="col">fname</th>
+        <th scope="col">lname</th>
+        <th scope="col">dob</th>
+        <th scope="col">address</th>
+        <th scope="col">gender</th>
+        <th scope="col">standard</th>
+        <th scope="col">guardian_id</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for sts in st %}
+      <tr>
+        
+
+        <td>{{sts.prn_no}}</td>
+        <td>{{sts.fname}}</td>
+        <td>{{sts.lname}}</td>
+        <td>{{sts.dob}}</td>
+        <td>{{sts.address}}</td>
+        <td>{{sts.gender}}</td>
+        <td>{{sts.standard}}</td>
+        <td>{{sts.guardian_id}}</td>
+
+        
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock body %}
